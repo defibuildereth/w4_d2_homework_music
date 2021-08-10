@@ -26,8 +26,15 @@ def select(id):
 
 
 def albums(artist):
-    pass
-
+    albums = []
+    id = artist.id
+    sql = "SELECT * FROM albums WHERE artist_id = %s"
+    values = [id]
+    results = run_sql(sql, values)
+    for row in results:
+        album = Album(row['title'], row['genre'], artist)
+        albums.append(album)
+    return albums
 
 def select_all():
     sql = "SELECT * FROM artists"
