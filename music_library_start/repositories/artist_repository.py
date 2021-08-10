@@ -30,7 +30,8 @@ def albums(artist):
 
 
 def select_all():
-    pass
+    sql = "SELECT * FROM artists"
+    return run_sql(sql)
 
 def delete(id):
     pass
