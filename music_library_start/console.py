@@ -9,8 +9,10 @@ album_repository.delete_all()
 artist_repository.delete_all()
 
 artist1 = Artist("Super Cool Band Yeah")
+album1 = Album("Trilbies and Glasses of White Wine", "Weekend Rockstars", artist1)
 
 artist_repository.save(artist1)
+album_repository.save(album1)
 
 
 
