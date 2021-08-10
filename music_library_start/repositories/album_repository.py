@@ -33,7 +33,8 @@ def delete(id):
     pass
 
 def select_all():
-    pass
+    sql = "SELECT * FROM albums"
+    return run_sql(sql)
 
 def update(album):
     pass
